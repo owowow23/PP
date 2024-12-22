@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>개인 포트폴리오</title>
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="icon" href="img/favicon.ico">
+    <!-- fullpage plugin css -->
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!-- swiper plugin css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- 외부 css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- jquery library  -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- fullpage plugin js -->
+    <script src="js/jquery.fullPage.js"></script>
+    <!-- swiper plugin js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 외부 js -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+            </div> 
+            <div class="menu_icon">
+                <a href="#">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z"/><path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                </a>
+            </div>           
+        </header>
+        <nav>
+            <div class="close">
+                <a href="#">
+                    <svg data-name="Livello 1" id="Livello_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><title/><path d="M64,0a64,64,0,1,0,64,64A64.07,64.07,0,0,0,64,0Zm0,122a58,58,0,1,1,58-58A58.07,58.07,0,0,1,64,122Z"/><path d="M92.12,35.79a3,3,0,0,0-4.24,0L64,59.75l-23.87-24A3,3,0,0,0,35.88,40L59.76,64,35.88,88a3,3,0,0,0,4.25,4.24L64,68.25l23.88,24A3,3,0,0,0,92.13,88L68.24,64,92.13,40A3,3,0,0,0,92.12,35.79Z"/></svg>
+                </a>
+            </div>
+            <ul>
+                <li data-menuanchor="home">
+                    <a href="#home" class="active">홈</a>
+                </li>
+                <li data-menuanchor="portfolio">
+                    <a href="#portfolio">포트폴리오</a>
+                </li>
+                <li data-menuanchor="profile">
+                    <a href="#profile">프로필</a>
+                </li>                
+                <li data-menuanchor="emails">
+                    <a href="#emails">이메일</a>
+                </li>
+            </ul>
+        </nav>
+       <!-- id="home"은 메뉴의 #home과 연동, class="section"은 fullpage플러그인에서 사용  -->
+       <section class="section home" id="mo-home">
+            <!-- 인트로 -->
+            <div class="home_title">
+                I'm
+            </div> 
+            <div class="creative__text--animation-1 ">
+                <span style="--i: 0;" data-text="Trendy.">Trendy.</span>
+                <span style="--i: 1;" data-text="Visibility.">Visibility.</span>
+                <span style="--i: 2;" data-text="Developer.">Developer.</span>
+                <span style="--i: 3;" data-text="Creative.">Creative.</span>
+            </div>
+       </section>
+       <section class="section portfolio" id="mo-portfolio">
+            <h2>Porfolio</h2>
+            <div class="swiper_box">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="http://owowow23.dothome.co.kr/pp/">&nbsp;&nbsp;&nbsp; 1. 젤리빈 홍보 사이트</a>
+                            <a href="download/젤리빈 홈페이지 기획서.pdf">&nbsp;&nbsp;&nbsp; 2. 젤리빈 홍보 사이트 기획서</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://owowow23.dothome.co.kr/pp2/">&nbsp;&nbsp;&nbsp; 1. GoogleBlogKorea 사이트</a>
+                            <a href="download/GoogleKoreaBlog 기획서.pdf">&nbsp;&nbsp;&nbsp; 2. GoogleBlogKorea 사이트 기획서</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="download/JSP 도서쇼핑몰 프로젝트 완료 보고서.pdf">&nbsp;&nbsp;&nbsp; 1. JSP 서점 사이트 기획서</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="download/젤리빈 홈페이지 기획서.pdf">&nbsp;&nbsp;&nbsp; 1. NAVER API + SpringBoot3 여행 사이트 기획서</a>
+                        </div>
+                    </div><!--swiper-wrapper-->            
+                </div><!--swiper-->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+       </section>
+       <section class="section profile" id="mo-profile">
+            <div class="profile_box">                
+                <div class="me">
+                    <h2>Profile</h2>
+                    <div class="my_photo">
+                        <img src="img/profile.png" alt="profile">
+                    </div>
+                    <div class="txt">
+                        <p>교육기관 : 연희직업전문학교</p>
+                        <p>교육과정 : (디지털 컨버전스) JAVA, Spring 기반 데이터 융합 웹 개발자 과정</p>
+                        <p>교육기간 : 2024.06.24 ~ 2024.12.10(113일)</p>
+                        <p>교육내용 : JAVA, JSP, Spring Framework, Spring boot 3, MySQL, HTML5, CSS3, Figma</p>                
+                    </div>
+                </div>
+                <div class="skill">
+                    <h2>My Skill</h2>
+                    <div class="skill_box">
+                        <div class="container-skillbar">
+                            <div class="skillbar clearfix " data-percent="80%">
+                                <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
+                                <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+                                <div class="skill-bar-percent">80%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="70%">
+                                <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
+                                <div class="skillbar-bar" style="background: #EBB035;"></div>
+                                <div class="skill-bar-percent">70%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="50%">
+                                <div class="skillbar-title" style="background: #06A2CB;"><span>jQuery</span></div>
+                                <div class="skillbar-bar" style="background: #06A2CB;"></div>
+                                <div class="skill-bar-percent">50%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="80%">
+                                <div class="skillbar-title" style="background: #218559;"><span>Figma</span></div>
+                                <div class="skillbar-bar" style="background: #218559;"></div>
+                                <div class="skill-bar-percent">80%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="60%">
+                                <div class="skillbar-title" style="background: #D0C6B1;"><span>Java</span></div>
+                                <div class="skillbar-bar" style="background: #D0C6B1;"></div>
+                                <div class="skill-bar-percent">60%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="70%">
+                                <div class="skillbar-title" style="background: #192823;"><span>JSP</span></div>
+                                <div class="skillbar-bar" style="background: #454545;"></div>
+                                <div class="skill-bar-percent">70%</div>
+                            </div> <!-- Ende Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="80%">
+                                <div class="skillbar-title" style="background: #6482AD;"><span>MySQL</span></div>
+                                <div class="skillbar-bar" style="background: #7FA1C3;"></div>
+                                <div class="skill-bar-percent">80%</div>
+                            </div> <!-- Ende Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="65%">
+                                <div class="skillbar-title" style="background: #7C00FE;"><span>Spring Boot 3</span></div>
+                                <div class="skillbar-bar" style="background: #7C00FE;"></div>
+                                <div class="skill-bar-percent">64%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        </div><!-- Ende container Skill Bar -->
+                    </div>
+                </div>
+            </div>
+       </section>   
+       <section class="section email" id="mo-emails">
+            <div class="email_box">
+                <div class="email_animation">
+                    <div class="letter-image">
+                        <div class="animated-mail">
+                            <div class="back-fold"></div>
+                            <div class="letter">
+                                <div class="letter-border"></div>
+                                <div class="letter-title"></div>
+                                <div class="letter-context"></div>
+                                <div class="letter-stamp">
+                                    <div class="letter-stamp-inner"></div>
+                                </div>
+                            </div>
+                            <div class="top-fold"></div>
+                            <div class="body"></div>
+                            <div class="left-fold"></div>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+                <div class="send_email">
+                    <h2>Contact Me</h2>
+                    <form class="gform pure-form pure-form-stacked" method="POST" data-email="doong98@gmail.com"  action="https://script.google.com/macros/s/AKfycby-8rKju1PFe0s2qAbLUKwYRI5XtLMqtP3N0VFQ7dG0L4Bs9RVY2HgBzU-hDvfYEQ-KhQ/exec">
+                    <!-- change the form action to your script url -->
+                    <div class="form-elements">
+                        <div>
+                            <label for="name">성&nbsp;&nbsp;&nbsp;명&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                            <input id="name" name="name" placeholder="당신의 성명을 작성해 주세요." />
+                        </div>
+                        <div>
+                            <label for="email">이메일&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                            <input id="email" name="email" type="email" value="" required placeholder="당신의 이메일을 작성해 주세요."/> 
+                        </div>
+                        <div>
+                            <label for="message">메시지&nbsp;&nbsp;:&nbsp;&nbsp; </label>
+                            <textarea id="message" name="message" rows="5" placeholder="편지 내용을 작성해 주세요."></textarea>
+                        </div>
+                        <div>
+                            <label for=""></label>
+                            <button class="button-success pure-button button-xlarge">
+                                <i class="fa fa-paper-plane"></i>&nbsp;보내기</button>
+                        </div>
+                    </div>
+
+                    <!-- Customise the Thankyou Message People See when they submit the form: -->
+                    <div class="thankyou_message" style="display:none;">
+                    <h2>메일이 전송되었습니다.<em>감사합니다.</em></h2>
+                    </div>
+
+                </form>
+                </div>
+            </div>
+       </section>
+       <footer class="section fp-auto-height">
+            ⓒ MyHomePage personal.
+       </footer>
+       <div id="top">TOP</div>
+    </div>
+    <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+</body>
+</html>

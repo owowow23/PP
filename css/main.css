@@ -1,0 +1,825 @@
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration: none; color:#111; display:block;}
+img { width:100%; }
+body { font-family: 'HancomMalangMalang-Regular'; overflow-x: hidden; }
+.wrap { width:100%; }
+header {
+    position:fixed;
+    left:0; top:0;
+    width:100%;
+    height:60px;
+    background-color: #7FA1C3;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    padding:0 10%;
+}
+header .logo {
+    width:160px; 
+    height:40px;
+    background-color: #6482AD;
+}
+header .logo a { 
+    color:white; 
+    text-align: center; 
+    line-height: 40px;
+    font-size: 20px;
+}
+header .logo a img {
+    width: 20px;
+    height: 40px;
+}
+header .menu_icon {
+    display: none;
+}
+nav {
+    position: fixed;
+    right:10%;
+    top:15px;
+    z-index:101;
+}
+nav .close {
+    display: none;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    margin-left:100px;
+}
+nav ul li a {
+    color:#cfcfcf;
+    font-size:20px;
+}
+nav ul li:hover a,
+nav ul li.active a {
+    color:white;
+}
+section {
+    background-color: #DEF9C4;
+}
+/* 짝수번째 section의 배경색 지정 */
+section:nth-child(even){
+    background-color: #F5EDED;
+}
+/* 첫번째 section에 글자 타이핑 애니메이션 넣기 */
+.home {
+    --white-color: #ffffff;
+    --dark-color: #052148;
+    --dark-color-alt:#1a4076;   
+    background: var(--dark-color);
+    background-image: linear-gradient(to right, var(--dark-color-alt) 1px, transparent 1px), linear-gradient(to bottom, var(--dark-color-alt) 1px, transparent 1px);
+    background-size: 4vh 4vh;
+    font-family: "Poppins", sans-serif;
+}
+.home .fp-tableCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home .home_title {
+    --primary-color: white;
+    --text-color: #ffffff;
+    display: inline-block;
+    font-size: 8em;
+    font-weight: 600;
+    padding:0;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--primary-color);
+    filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 25px var(--primary-color));
+}
+.creative__text--animation-1 {
+    --primary-color: white;
+    --text-color: #ffffff;
+    display: inline-block;
+    font-size: 8em;
+    font-weight: 600;
+    padding:0;
+    color: var(--text-color);
+}
+.creative__text--animation-1 span {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--primary-color);
+    line-height: 1.2em;
+    padding: 5px 10px;
+    animation: displayText 12s infinite;
+    animation-delay: calc(-3s * var(--i));
+    -webkit-animation: displayText 12s infinite;
+    -webkit-animation-delay: calc(-3s * var(--i));
+}
+@keyframes displayText {
+    0% {
+        display: inline-block;
+    }
+    25%, 100% {
+        display: none;
+    }
+}
+@-webkit-keyframes displayText {
+    0% {
+        display: inline-block;
+    }
+    25%, 100% {
+        display: none;
+    }
+}
+.creative__text--animation-1 span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border-right: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    animation: animate 3s linear infinite;
+    filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 25px var(--primary-color));
+    -webkit-animation: animate 3s linear infinite;
+    -webkit-filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 25px var(--primary-color));
+}
+@keyframes animate {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+@-webkit-keyframes animate {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+.portfolio h2 {
+    font-size:30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.portfolio .swiper_box {
+    width:80%;
+    margin:0 auto;
+    position: relative;
+}
+.portfolio .swiper {
+    width:90%;
+    margin:0 auto;
+}
+.portfolio .swiper .swiper-slide {
+    text-align: center;
+    background-color: #1a4076;
+    width:100%;
+    height:500px;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+.portfolio .swiper_box .swiper-button-next,
+.portfolio .swiper_box .swiper-button-prev {
+    width:50px;
+    height:50px;
+}
+
+.portfolio .swiper_box .swiper-button-next:after {
+    content:"";
+    background-image: url(../img/next.png);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100%;
+}
+.portfolio .swiper_box .swiper-button-prev:after {
+    content:"";
+    background-image: url(../img/prev.png);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100%;
+}
+.portfolio .swiper_box .swiper-pagination {
+    bottom:-50px;
+}
+.portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {
+    width:50px; height:4px;
+    border-radius: 3px;
+}
+.portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet-active {
+    background-color:#7FA1C3;
+}
+/* 스킬바 */
+.profile .profile_box {
+    width:80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.profile .profile_box > div {
+    width:48%;
+    background-color: rgba(255,255,255, 0.3);
+    border-radius: 10px;
+    padding: 5vw;
+}
+.profile .profile_box > div h2 {
+    font-size:30px;
+    margin-bottom: 40px;
+}
+.profile .profile_box > div p {
+    line-height: 30px;
+}
+.profile .profile_box .my_photo {
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    width:50%;
+    margin:0 auto;
+}
+.container-skillbar {
+    width:100%;
+    padding-top:30px;
+    height:auto;
+    overflow:none;
+}
+.skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:15px;
+    width:100%;
+    background:#efefef;
+    height:30px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+}
+
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:110px;
+    font-weight:bold;
+    font-size:13px;
+    color:#fff;
+    background:#6adcfa;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+    white-space: nowrap;
+    display:block;
+    background:rgba(0, 0, 0, 0.15);
+    padding:0 15px;
+    height:30px;
+    line-height:30px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+    height:30px;
+    width:110px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:11px;
+    height:30px;
+    line-height:30px;
+    color:#ffffff;
+    color:rgba(0, 0, 0, 0.5);
+}
+
+.email .email_box {
+    width:80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.email .email_box > div {
+    /* width:48%; */
+    background-color: rgba(255,255,255, 0.2);
+    border-radius: 10px;
+    padding:5%;
+}
+.email .email_box > div:first-child {
+    width:38%;
+}
+.email .email_box > div:last-child {
+    width:60%;
+}
+.email .email_box h2 {
+    font-size:30px;
+    margin-bottom: 60px;
+}
+.email .email_box > div > div > div {
+    display: flex;    
+    align-items: flex-start;
+    padding:10px;
+    padding-left: 0;
+    font-size:20px;
+}
+.email .email_animation {
+    position: relative;
+}
+/* email_animation */
+.letter-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .animated-mail {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .animated-mail .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 200px;
+    border-color: transparent transparent #89abcd transparent;
+    z-index: 3;
+  }
+  .animated-mail .top-fold {
+    position: absolute;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 100px 0 100px;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    -moz-transform-origin: 50% 0%;
+    -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    border-color: #6482AD transparent transparent transparent;
+    z-index: 2;
+  }
+  .animated-mail .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    background: #6482AD;
+    z-index: 0;
+  }
+  .animated-mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 110px;
+    border-color: transparent transparent transparent #7FA1C3;
+    z-index: 2;
+  }
+  .animated-mail .letter {
+    left: 20px;
+    bottom: 0px;
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    background: white;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition: 0.4s 0.2s;
+    -moz-transition: 0.4s 0.2s;
+    transition: 0.4s 0.2s;
+  }
+  .animated-mail .letter .letter-border {
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #7FA1C3, #6482AD 8px, transparent 8px, transparent 18px);
+  }
+  .animated-mail .letter .letter-title {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 40%;
+    background: #6482AD;
+  }
+  .animated-mail .letter .letter-context {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 20%;
+    background: #6482AD;
+  }
+  .animated-mail .letter .letter-stamp {
+    margin-top: 30px;
+    margin-left: 120px;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    background: #6482AD;
+    opacity: 0.3;
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 400px;
+    height: 30px;
+    transition: 0.4s;
+    transform: translateX(-50%);
+    -webkit-transition: 0.4s;
+    -webkit-transform: translateX(-50%);
+    -moz-transition: 0.4s;
+    -moz-transform: translateX(-50%);
+    border-radius: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  }
+  
+  .letter-image.active .animated-mail {
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+  }
+  .letter-image.active .animated-mail .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    -webkit-transition: transform 0.4s, z-index 0.2s;
+    -webkit-transform: rotateX(180deg);
+    -moz-transition: transform 0.4s, z-index 0.2s;
+    -moz-transform: rotateX(180deg);
+    z-index: 0;
+  }
+  .letter-image.active .animated-mail .letter {
+    height: 180px;
+  }
+  .letter-image.active .shadow {
+    width: 250px;
+  }
+
+.email .email_box .form-elements div {
+    display: flex;
+    align-items: flex-start;
+    margin:15px 0;
+}
+.email .email_box label {
+    padding:10px 0;
+    display: block;
+    width:70px;
+}
+.email .email_box input {
+    border:1px solid #ccc;
+    padding:10px;
+    padding-top: 15px;
+    background-color: transparent;
+    font-size:18px;
+    width:70%;
+}
+.email .email_box input::placeholder {
+    color:#7FA1C3;
+    font-size:14px;
+}
+.email .email_box textarea::placeholder {
+    color:#7FA1C3;
+}
+.email .email_box textarea {
+    border:1px solid #ccc;
+    padding:10px;
+    padding-top: 15px;
+    background-color: transparent;
+    width:90%;
+}
+.email .email_box button {
+    background-color: #7FA1C3;
+    border:none;
+    padding:10px 20px;
+    color:white;
+    border-radius: 6px;
+    font-size:18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+footer {
+    width:100%; 
+    padding:10px 0;
+    text-align: center;
+    background-color: #6482AD;
+    color:#cfcfcf;
+}
+/* 브라우저 화면 오른쪽의 navigation의 마지막 메뉴 숨김 */
+#fp-nav ul li:last-child {
+    display: none;
+}
+/* navigation에 아이콘 사용 */
+#fp-nav ul li {
+    margin:20px;
+    margin-right: 0;
+}
+#fp-nav ul li a span {
+    background-color: transparent;
+    background-image: url(../img/black-star.png);
+    background-size: cover;
+    width:12px; height:12px;
+    margin:-6px 0 0 -6px;
+}
+#fp-nav ul li a.active span {
+    background-image: url(../img/star.png);
+    background-size: cover;
+    width:20px; height:20px;
+    margin:-10px 0 0 -10px;
+}
+#top {
+    position: fixed;
+    right:40px;
+    bottom:40px;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: #1a4076;
+    color:white;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+/* 태블릿 버전 - 가로 */
+@media screen and (max-width:1279px) {
+    header { padding:0 9%; height:40px; }
+    header .logo { width:100px; height:30px; }
+    header .logo a { line-height: 30px; }
+    nav { right:9%; top:8px; }
+    nav ul li { margin-left: 70px;}
+    nav ul li a { font-size:16px; }    
+    .home .home_title {
+        font-size: 5em;
+    }
+    .creative__text--animation-1 {
+        font-size: 5em;
+    }
+    .portfolio .swiper_box { width: 91%; }
+    .portfolio .swiper_box .swiper { width:90%; }
+    .portfolio .swiper_box .swiper .swiper-slide {
+        height:60vh;
+    }
+    .portfolio .swiper_box .swiper-button-next,
+    .portfolio .swiper_box .swiper-button-prev {
+        width:30px;
+        height:30px;
+    }
+    .profile .profile_box { width:82%; }
+    .profile .profile_box > div {
+        padding: 4vw;
+    }
+    .profile .profile_box > div h2 {
+        font-size:24px;
+        margin-bottom: 20px;
+    }
+    .email .email_box { width:82%; }
+}
+
+/* 태블릿 버전 - 세로 */
+@media screen and (max-width:767px) {
+    .portfolio .swiper_box { width: 96%; }
+    .portfolio .swiper_box .swiper { width:86%; }
+    .portfolio .swiper_box .swiper .swiper-slide {
+        height:50vh;
+    }
+    .profile .profile_box { 
+        flex-flow:column nowrap;
+     }
+    .profile .profile_box > div {
+        width:100%;
+        margin: 2vh auto;
+        padding: 4vw;
+    }
+    .profile .profile_box > div h2 {
+        font-size:20px;
+        width:100%;
+    }
+    .profile .profile_box .me {
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: space-between;
+    }
+    .profile .profile_box .my_photo {
+        margin:20px 0 0 0;
+        width:26%;
+        height:50%;
+    }
+    .profile .profile_box .txt {
+        width:58%;
+        line-height: 24px;
+        text-indent: -65px;     /*음수:내어쓰기, 양수:들여쓰기*/
+    }
+    .container-skillbar { padding-top: 0; }
+    .skillbar { height:24px; margin-bottom: 10px; }
+    .skillbar-title span { height:100%; line-height:24px; }
+    .skillbar-bar { height:100%; }
+    .skill-bar-percent { height:24px; line-height: 24px; }
+    .email .email_box { 
+        width:82%; 
+        flex-flow:column nowrap;
+    }
+    .email .email_box > div:first-child {
+        width:100%;
+        margin-top: 100px;
+        order:2;      /*순서변경*/
+        background-color: transparent;
+    }
+    .email .email_box > div:last-child {
+        width:100%;
+        order:1;       /*순서변경*/ 
+    }
+}
+
+/* 모바일 버전 */
+@media screen and (max-width:480px) {
+    header { 
+        width:100%; 
+        padding:0; 
+        display: flex;
+        justify-content: space-between;
+    }
+    header .menu_icon {
+        /* 모바일 버전에서는 메뉴 아이콘 보임 */
+        display: block;
+        width:30px;
+        height:30px;
+        margin-right: 2%;
+    }
+    header .menu_icon svg {
+        width:100%; height: 100%;
+        fill:white;
+    }
+    nav { 
+        top:0;
+        right:-100%;
+        width:50%;
+        height:100vh;
+        background-color:#1a4076;
+        padding: 6vw 4vw 4vw 8vw;
+    }
+    nav .close {
+        /* 모바일 버전에서는 닫기 버튼 보임 */
+        display: block;
+        width:30px;
+        float:right;
+    }
+    nav .close svg {
+        fill:#ccc;
+    }
+    nav ul {
+        margin-top: 50px;
+        flex-flow:column nowrap;
+    }
+    nav ul li { margin-left: 0;}
+    nav ul li a { padding: 20px 0; font-size:20px; color:white; }
+    section {
+        display: flex;
+        flex-flow:column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding:4vw;
+    }
+    .home {
+        width:100%;
+        height:100vh; 
+        padding:0;       
+    }
+    .home .home_title {
+        font-size: 4em;
+    }
+    .creative__text--animation-1 {
+        font-size: 4em;
+    }
+    .portfolio {
+        width:100%;
+        height:80vh;
+    }
+    .portfolio h2 {
+        font-size:20px; 
+        margin-bottom: 30px;
+    }
+    .portfolio .swiper_box {
+        width:100%;
+    }
+    .portfolio .swiper_box .swiper {
+        width:76%;
+    }
+    .portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {
+        width:30px;
+    }
+    .profile .profile_box {
+        width:100%;
+    }
+    .profile .profile_box > div h2 {
+        font-size:20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .profile .profile_box .me {
+        flex-flow:column nowrap;
+    }
+    .profile .profile_box .me .my_photo {
+        margin:0 auto;
+    }
+    .profile .profile_box .me .txt {
+        width:83%;
+        margin-left:65px;
+        margin-top: 20px;
+    }
+    #fp-nav {
+        display: none;
+    }
+    .email .email_box {
+        width:100%;
+    }
+    .email .email_box > div {
+        background-color: transparent;
+    }
+    .email .email_box label {
+        white-space: nowrap;
+    }
+    .email .email_box input {
+        width:80%;
+    }
+    .email .email_box textarea {
+        width:80%;
+    }
+    .email .email_box > div:first-child {
+        margin-top: 0px;
+        height:260px;
+    }
+    .email .email_box h2 {
+        font-size:20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .email .email_box button {
+        font-size:16px;
+    }
+    .letter-image {
+        scale:0.7;
+        left:45%;
+    }
+    #top {
+        right:10px;
+        bottom:10px;
+        width:40px;
+        height:40px;
+        line-height: 40px;
+        cursor: pointer;
+        font-size:12px;
+    }    
+}
+
+
+
